@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     //
+    protected $fillables = [
+      'name', 'datails', 'price', 'discount'
+    ];
     public function reviews(){
       return  $this->hasMany(Review::class);
     }

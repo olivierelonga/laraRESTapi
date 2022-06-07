@@ -51,6 +51,13 @@ class ProductController extends Controller
             $request['detail'] = $request->description;
             unset($request['description']);
             $product->update($request->all());
+            // add reponse Response.php
+        }
+
+
+        public function destroy(){
+            $product->delete();
+            // add reponse
         }
 
 }
